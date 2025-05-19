@@ -1,0 +1,85 @@
+html{
+    background-color: #FFF;
+}
+
+body{
+    width: 600px;
+    height: 800px;
+    margin: 32px;
+
+    font-family: sans-serif;
+
+    border: solid black 2px;
+    background-color: #333;
+}
+
+.container{
+    display: flex;
+}
+
+.vertical{
+    flex-direction: column;
+}
+
+.display{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: end;
+    
+    flex: 1;
+    margin: 12px;
+    padding: 0px 8px 4px;
+    height: 100%;
+
+    border: solid black 1px;
+    background-color: #CCCCCC;
+
+    font-family:"Courier New", monospace;
+    font-size: x-large;
+}
+
+.display h1{
+    margin: 4px;
+}
+
+.keypad{
+    flex-direction: column;
+    flex: 4;
+    margin: 8px;
+    height: 100%
+}
+
+.buttons{
+    flex: 1;
+    margin: 2px;
+    height: 100%;
+}
+
+.buttons button{
+    box-sizing: border-box;
+    flex: 1;
+    margin: 0px 2px 0px;
+    font-size: 48pt;
+    
+}
+
+button.zero{
+    flex: 1.17 0 20%;
+}
+
+button.number{
+    background-color: rgb(170, 221, 221);
+}
+
+button.operator, button.decimal{
+    background-color: rgb(225, 170, 170);
+}
+
+button.equals {
+    background-color: rgb(226, 226, 148);
+}
+
+button.empty {
+    background-color: #333;
+    border: 1px solid #333;
+}
