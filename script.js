@@ -31,8 +31,31 @@ function operate(operand1, operand2, operator){
     }
 }
 
+function clear(display){
+    operand1 = NaN;
+    operand2 = NaN;
+    operator = "";
+
+    const displays = display.children;
+    for (let i = 0; i < displays.length; i++){
+        displays[i].textContent = "";
+    }
+}
+
 let operand1 = NaN;
 let operand2 = NaN;
 let operator = "";
 
 let operatorPressed = false;
+
+const display = document.querySelector(".display");
+
+document.querySelector(".clear").addEventListener("click", () => {
+    clear(display);
+});
+
+document.querySelectorAll("button.number").forEach(button => {
+    button.addEventListener("click", function(e) {
+        display.querySelector(".numbers").textContent += e.target.textContent;
+    });
+});
